@@ -1,4 +1,4 @@
-package com.globant.mariorangel.models
+package com.globant.mariorangel.models.realmmodule
 
 import io.realm.annotations.RealmModule
 
