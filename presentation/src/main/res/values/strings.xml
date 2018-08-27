@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Marvel-characters</string>
+    <string name="default_description">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</string>
+    <string name="default_name">Default Name</string>
+</resources>
