@@ -1,7 +1,7 @@
 package com.globant.mariorangel.marvelcharacters.characters
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import com.globant.mariorangel.marvelcharacters.R
 import com.globant.mariorangel.marvelcharacters.characters.model.CharactersModel
 import com.globant.mariorangel.marvelcharacters.characters.presenter.CharactersPresenter
@@ -14,17 +14,20 @@ class CharactersActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_characters)
+
         presenter = CharactersPresenter(CharactersModel(), CharactersView(this))
         presenter.loadCharacters()
     }
 
     override fun onResume() {
         super.onResume()
+
         presenter.register()
     }
 
     override fun onPause() {
         super.onPause()
+
         presenter.unRegister()
     }
 }

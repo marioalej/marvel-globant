@@ -15,7 +15,9 @@ class CharactersPresenter(private val model: CharactersModel,
     }
 
     fun loadCharacters() {
+        sview.showProgressBar()
         model.getCharacters().fetchFromApi {
+            sview.hideProgressBar()
             sview.initRecycler(it)
         }
     }
