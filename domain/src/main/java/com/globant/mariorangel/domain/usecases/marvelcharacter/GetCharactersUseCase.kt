@@ -16,7 +16,7 @@ class GetCharactersUseCase {
 
         val databaseWrapper = RealmDatabaseProvider<MarvelCharacter>()
 
-        UseCaseDisposables.addDisposable(MarvelService.getApi().getCharacters(10)
+        UseCaseDisposables.addDisposable(MarvelService.getApi().getCharacters(50)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(object: DisposableSingleObserver<RootResponse>() {

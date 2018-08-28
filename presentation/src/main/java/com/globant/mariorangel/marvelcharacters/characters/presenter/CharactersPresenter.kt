@@ -11,7 +11,11 @@ class CharactersPresenter(private val model: CharactersModel,
                           private val sview: CharactersView) : BasePresenter(sview){
 
     override fun subscribeObservers(activity: Activity) {
-
+        RxBus.subscribe(activity, object : CallMarvelCharactersService() {
+            override fun onEvent(value: OnServiceInvoked) {
+                loadCharacters()
+            }
+        })
     }
 
     fun loadCharacters() {
