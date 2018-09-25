@@ -1,7 +1,7 @@
 package com.globant.mariorangel.marvelcharacters
 
 import android.app.Application
-import com.globant.mariorangel.models.MarvelRealmModule
+import com.globant.mariorangel.models.realmmodule.MarvelRealmModule
 import io.realm.Realm
 import io.realm.RealmConfiguration
 
